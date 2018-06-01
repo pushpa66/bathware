@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {% if component1 == "components/cart.html.twig" %}
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="{{ asset('css/cart.css') }}">
+    {% endif %}
+    {% if component1 == "components/items.html.twig" %}
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="{{ asset('css/items.css') }}">
+    {% endif %}
+{% endblock %}
+{% block body %}
+
+    {% embed "components/navbar.html.twig" %}
+
+    {% endembed %}
+    {% embed component1 %}
+
+    {% endembed %}
+
+{% endblock %}
+
+{% block javascripts %}
+    {% if component1 == "components/cart.html.twig" %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% endif %}
+
+    {% if component1 == "components/items.html.twig" %}
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    {% endif %}
+{% endblock %}
