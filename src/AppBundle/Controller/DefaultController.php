@@ -34,4 +34,13 @@ class DefaultController extends Controller
         // replace this example code with whatever you need
         return $this->render('pages/itemsPage.html.twig');
     }
+
+    /**
+     * @Route("/products", name="products")
+     */
+    public function productsAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('pages/productsPage.html.twig');
+    }
 }
