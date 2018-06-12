@@ -22,25 +22,10 @@ class DefaultController extends Controller
      */
     public function cartAction(Request $request)
     {
+        $active = array("cart" => "active");
         // replace this example code with whatever you need
-        return $this->render('pages/cartPage.html.twig');
-    }
-
-    /**
-     * @Route("/items", name="items")
-     */
-    public function itemsAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('pages/itemsPage.html.twig');
-    }
-
-    /**
-     * @Route("/products", name="products")
-     */
-    public function productsAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('pages/productsPage.html.twig');
+        return $this->render('pages/cartPage.html.twig', array(
+            "active" => $active
+        ));
     }
 }

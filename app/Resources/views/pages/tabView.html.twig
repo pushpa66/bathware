@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% embed "components/navbar.html.twig" %}
+
+    {% endembed %}
+    <div class="container">
+        <ul class="nav nav-tabs">
+            {% for tab in tabs %}
+                <li class="tablinks" id="tablinks-{{ tab }}"><a onclick="loadItems(event, '{{ tab }}')" href="#">{{ tab }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% for key, tabData in tabsData %}
+        <div id="{{ key }}" class="tabcontent">
+            {% embed "components/products.html.twig" %}
+            {% endembed %}
+        </div>
+    {% endfor %}
+
+    <script>
+        $(document).ready(function() {
+            loadItemsInitial('{{ tabs[0] }}');
+        });
+
+        function loadItemsInitial(divID) {
+            var tab;
+            document.getElementById(divID).style.display = "block";
+            tab = document.getElementById("tablinks-"+divID);
+            tab.className += " active";
+
+        }
+
+        function loadItems(evt, divID) {
+            var i, tabcontent, tablinks, tab;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(divID).style.display = "block";
+            tab = document.getElementById("tablinks-"+divID);
+            tab.className += " active";
+        }
+    </script>
+
+    <style>
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{{ asset('css/products.css') }}">
+{% endblock %}
+
+{% block javascriptsHead %}
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+{% endblock %}
