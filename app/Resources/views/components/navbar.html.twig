@@ -1,26 +1,54 @@
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="{{ path('homepage') }}">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ path('homepage') }}"><span class="glyphicon glyphicon-user"></span> sanitary.lk</a>
+                </div>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Ceramic<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('items') }}">All</a></li>
+                    <li><a href="{{ path('products') }}">WC</a></li>
+                    <li><a href="{{ path('items') }}">Wash Basin</a></li>
+                    <li><a href="{{ path('items') }}">Urinal</a></li>
+                    <li><a href="{{ path('items') }}">Bath Tubs</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Plumbing Accessories<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('items') }}">All</a></li>
+                    <li><a href="{{ path('products') }}">Flexible Hose</a></li>
+                    <li><a href="{{ path('items') }}">Angle Valve</a></li>
+                    <li><a href="{{ path('items') }}">Bottle Tap</a></li>
+                    <li><a href="{{ path('items') }}">Pillar Tap</a></li>
+                    <li><a href="{{ path('items') }}">Bib Tap</a></li>
+                    <li><a href="{{ path('items') }}">Two Way Tap</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Bath Accessories<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('items') }}">All</a></li>
+                    <li><a href="{{ path('products') }}">Towel Rack</a></li>
+                    <li><a href="{{ path('items') }}">Soap Holder</a></li>
+                    <li><a href="{{ path('items') }}">Mirrors</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Kitchen Gully<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('items') }}">All</a></li>
+                    <li><a href="{{ path('products') }}">Shower Channels</a></li>
+                    <li><a href="{{ path('items') }}">Floor Drains</a></li>
+                    <li><a href="{{ path('items') }}">Kitchen Bench Drain</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ path('cart') }}">Cart</a></li>
         </ul>
-      </li>
-      <li><a href="{{ path('items') }}">Items</a></li>
-      <li><a href="{{ path('cart') }}">Cart</a></li>
-      <li><a href="{{ path('products') }}">Products</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
 </nav>
 
 
