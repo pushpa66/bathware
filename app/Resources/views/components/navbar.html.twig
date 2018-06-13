@@ -6,7 +6,7 @@
                     <a class="navbar-brand" href="{{ path('homepage') }}"><span class="glyphicon glyphicon-user"></span> sanitary.lk</a>
                 </div>
             </li>
-            <li class="dropdown {% if active['ceramic'] is defined %} {{ active['ceramic'] }} {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown">Ceramic<span class="caret"></span></a>
+            <li class="dropdown {% if active['ceramic'] is defined %} {{ active['ceramic'] }} {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown">Ceramic <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ path('products_ceramic') }}">All</a></li>
                     <li><a href="{{ path('products_ceramic_wc') }}">WC</a></li>
@@ -15,7 +15,7 @@
                     <li><a href="{{ path('products_ceramic_bath_tub') }}">Bath Tub</a></li>
                 </ul>
             </li>
-            <li class="dropdown {% if active['plumbing-accessories'] is defined %} {{ active['plumbing-accessories'] }} {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown">Plumbing Accessories<span class="caret"></span></a>
+            <li class="dropdown {% if active['plumbing-accessories'] is defined %} {{ active['plumbing-accessories'] }} {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown">Plumbing Accessories <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ path('products_plumbing_accessories') }}">All</a></li>
                     <li><a href="{{ path('products_plumbing_accessories_flexible_hose') }}">Flexible Hose</a></li>
@@ -26,7 +26,7 @@
                     <li><a href="{{ path('products_plumbing_accessories_two_way_tap') }}">Two Way Tap</a></li>
                 </ul>
             </li>
-            <li class="dropdown {% if  active['bath-accessories'] is defined %} {{ active['bath-accessories'] }} {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown">Bath Accessories<span class="caret"></span></a>
+            <li class="dropdown {% if  active['bath-accessories'] is defined %} {{ active['bath-accessories'] }} {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown">Bath Accessories <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ path('products_bath_accessories') }}">All</a></li>
                     <li><a href="{{ path('products_bath_accessories_towel_rack') }}">Towel Rack</a></li>
@@ -34,12 +34,12 @@
                     <li><a href="{{ path('products_bath_accessories_mirror') }}">Mirror</a></li>
                 </ul>
             </li>
-            <li class="dropdown {% if  active['kitchen-gully'] is defined %} {{ active['kitchen-gully'] }} {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown">Kitchen Gully<span class="caret"></span></a>
+            <li class="dropdown {% if  active['kitchen-gully'] is defined %} {{ active['kitchen-gully'] }} {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown">Kitchen Gully <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ path('products_kitchen_gully') }}">All</a></li>
-                    <li><a href="{{ path('products_kitchen_gully_shower_channel') }}">Shower Channels</a></li>
-                    <li><a href="{{ path('products_kitchen_gully_floor_drain') }}">Floor Drains</a></li>
-                    <li><a href="{{ path('products_kitchen_gully_kitchen_bench_drain') }}">Kitchen Bench Drain</a></li>
+                    <li><a href="{{ path('products_kitchen_gully_shower_channel') }}">Shower Channel </a></li>
+                    <li><a href="{{ path('products_kitchen_gully_floor_drain') }}">Floor Drain </a></li>
+                    <li><a href="{{ path('products_kitchen_gully_kitchen_bench_drain') }}">Kitchen Bench Drain </a></li>
                 </ul>
             </li>
             <li class="{% if active['cart'] is defined %} {{ active['cart'] }}  {% endif %}"><a href="{{ path('cart') }}">Cart</a></li>
